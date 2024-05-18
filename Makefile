@@ -3,9 +3,11 @@ CFLAGS = #-Wall
 DEBUG_FLAGS = -g -DDEBUG
 RELEASE_FLAGS = -O2
 
-SRC_FILES = src/main.c 
+SRC_FILES = src/bmp.c \
+			src/main.c
+			
 
-DEPS = 
+DEPS = src/bmp.h
 
 LINKER_FLAGS = 
 
