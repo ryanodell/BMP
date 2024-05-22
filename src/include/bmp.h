@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "chr.h"
 
 // Bitmap File Header
 #pragma pack(push, 1)

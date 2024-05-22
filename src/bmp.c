@@ -1,10 +1,10 @@
-#include "bmp.h"
+#include "include/bmp.h"
 
 int process_bmp(const char* inputFile, const char* outputFile) {
-    FILE *file = fopen("image.bmp", "rb");
+    FILE *file = fopen(inputFile, "rb");
     if (file == NULL) {
         perror("Error opening file");
-        return 1;
+        return -1;
     }
 
     BITMAPFILEHEADER fileHeader;
@@ -38,6 +38,10 @@ int process_bmp(const char* inputFile, const char* outputFile) {
     fclose(file);
 
     // Use pixelData here...
+    int response = convert_to_chr(pixelData, width, height, outputFile);
+    if(response > 0) {
+        return -1;
+    }
 
     free(pixelData);
     return 0;

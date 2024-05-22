@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "bmp.h"
+#include "include/bmp.h"
 
 void print_usage(const char *program_name) {
     printf("Usage: %s [options]\n", program_name);
@@ -54,5 +54,6 @@ int main(int argc, char *argv[]) {
         printf("Output file: %s\n", output_file);
     }
     int result = process_bmp(input_file, output_file);
+    getchar();
     return 0;
 }

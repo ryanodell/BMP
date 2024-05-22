@@ -4,10 +4,12 @@ DEBUG_FLAGS = -g -DDEBUG
 RELEASE_FLAGS = -O2
 
 SRC_FILES = src/bmp.c \
+			src/chr.c \
 			src/main.c
 			
 
-DEPS = src/bmp.h
+DEPS = 	src/include/bmp.h \
+		src/include/chr.h		
 
 LINKER_FLAGS = 
 

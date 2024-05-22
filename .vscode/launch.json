@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/bin/main.exe",
-            "args": [],
+            "args": ["-i", "test.bmp", "-o", "out.chr"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
@@ -20,7 +20,14 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build-debug"
+            "preLaunchTask": "build-debug",
+            "logging": {
+                "trace": true,
+                "traceResponse": true,
+                "engineLogging": true,
+                "programOutput": true,
+                "exceptions": true
+            }
         }
     ]
   }
