@@ -1,3 +1,5 @@
+#ifndef BMP_H
+#define BMP_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -29,3 +31,5 @@ typedef struct {
 #pragma pack(pop)
 
 int process_bmp(const char* inputFile, const char* outputFile);
+
+#endif
