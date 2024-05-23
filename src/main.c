@@ -54,6 +54,7 @@ int main(int argc, char *argv[]) {
         printf("Output file: %s\n", output_file);
     }
     int result = process_bmp(input_file, output_file);
+    printf("Finished");
     getchar();
     return 0;
 }
