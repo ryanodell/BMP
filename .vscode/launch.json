@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/bin/main.exe",
-            "args": ["-i", "test.bmp", "-o", "out.chr"],
+            "args": ["-i", "example.bmp", "-o", "out.chr"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/bin",
             "environment": [],
