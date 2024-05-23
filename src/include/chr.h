@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int convert_to_chr(unsigned char *bmpData, int width, int heigh, const char* outputFile);
+int convert_to_chr(unsigned char *bmpData, int width, int height, const char* outputFile);
 
 #endif
 

@@ -1,19 +1,26 @@
 #include "include/chr.h"
 
-int convert_to_chr(unsigned char *bmpData, int width, int heigh, const char* outputFile) {
+int convert_to_chr(unsigned char *bmpData, int width, int height, const char* outputFile) {
     FILE* file = fopen(outputFile, "wb");
     if(!file) {
         perror("Failed to open/create output file");
         return -1;
     }
-    //Test code:
-    unsigned char data[] = {0x01, 0x02, 0x03, 0x04, 0x05};
-    size_t bytesWritten = fwrite(data, sizeof(unsigned char), sizeof(data), file);
-    if (bytesWritten != sizeof(data)) {
-        perror("Failed to write all bytes to file");
-        fclose(file);
-        return 1;
+
+    for(int y = 0; y < height; y + 8) {
+        for(int x = 0; x < width; x + 8) {
+            //Process chunk of 8x8 pixels
+        }
     }
+
+    //Test code:
+    // unsigned char data[] = {0x01, 0x02, 0x03, 0x04, 0x05};
+    // size_t bytesWritten = fwrite(data, sizeof(unsigned char), sizeof(data), file);
+    // if (bytesWritten != sizeof(data)) {
+    //     perror("Failed to write all bytes to file");
+    //     fclose(file);
+    //     return 1;
+    // }
     fclose(file);
     return 0;
 }
