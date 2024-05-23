@@ -1,6 +1,7 @@
 #include "include/bmp.h"
 
 int process_bmp(const char* inputFile, const char* outputFile) {
+    
     FILE *file = fopen(inputFile, "rb");
     if (file == NULL) {
         perror("Error opening file");

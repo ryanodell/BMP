@@ -8,7 +8,7 @@
             "program": "${workspaceRoot}/bin/main.exe",
             "args": ["-i", "test.bmp", "-o", "out.chr"],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}/bin",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
